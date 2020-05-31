@@ -16,11 +16,13 @@ let g:typescript_indent_disable = 1
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme dracula
 set termguicolors
 "airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='dracula'
+"let g:Lairline_theme='dracula'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'

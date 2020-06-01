@@ -43,7 +43,8 @@ Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'dyng/ctrlsf.vim'
 Plug 'mhinz/vim-startify'
-Plug 'greggerz/nerdtree-svn-plugin'
 Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'ryanoasis/vim-devicons'
+Plug 'severin-lemaignan/vim-minimap'
+
 call plug#end()

@@ -37,13 +37,13 @@ let g:ctrlp_custom_ignore = {
     \ 'file': 'tags\|tags.lock\|tags.temp',
 \ }
 " Prettier
-"let g:prettier#autoformat = 1
-"let g:prettier#config#print_width = 80
-"let g:prettier#config#trailing_comma = 'es5'
-"let g:prettier#config#jsx_bracket_same_line = 'true'
-"let g:prettier#config#jsxSingleQuote = 'true'
-"let g:prettier#config#bracket_spacing = 'true'
-"let g:prettier#config#arrow_parens = 'always'
+let g:prettier#autoformat = 1
+let g:prettier#config#print_width = 80
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#jsxSingleQuote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#arrow_parens = 'always'
 "autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.py Prettier
 " AUTO CLOSE TAGS
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js,*.vue'
@@ -62,8 +62,7 @@ let bclose_multiple = 0
 "SETUP python
 "let g:python_host_prog = '/Users/tiny/.pyenv/versions/neovim2/bin/python'
 "let g:python3_host_prog = '/Users/tiny/.pyenv/versions/neovim3/bin/python'
-"let g:python_host_prog = '/full/path/to/neovim2/bin/python'
-let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
+let g:python3_host_prog='C:\Users\daiNt\AppData\Local\Programs\Python\Python38-32\python.exe'
 "MULTI COSUR
 let g:multi_cursor_select_all_word_key = '<c-a>'
 let g:multi_cursor_quit_key='<Esc>'

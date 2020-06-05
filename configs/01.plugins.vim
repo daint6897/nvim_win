@@ -47,12 +47,4 @@ Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'ryanoasis/vim-devicons'
 Plug 'severin-lemaignan/vim-minimap'
 
-if has('nvim')
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-  else
-        Plug 'Shougo/deoplete.nvim'
-          Plug 'roxma/nvim-yarp'
-            Plug 'roxma/vim-hug-neovim-rpc'
-        endif
-        let g:deoplete#enable_at_startup = 1
 call plug#end()

@@ -11,7 +11,7 @@ Plug 'kangol/vim-pudb'
 
 Plug 'Shougo/neoinclude.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'autozimu/LanguageClient-neovim', {
+"Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
@@ -47,4 +47,12 @@ Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'ryanoasis/vim-devicons'
 Plug 'severin-lemaignan/vim-minimap'
 
+if has('nvim')
+      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+  else
+        Plug 'Shougo/deoplete.nvim'
+          Plug 'roxma/nvim-yarp'
+            Plug 'roxma/vim-hug-neovim-rpc'
+        endif
+        let g:deoplete#enable_at_startup = 1
 call plug#end()

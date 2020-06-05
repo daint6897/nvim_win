@@ -55,7 +55,11 @@ noremap <silent> <c-j> :wincmd j<CR>
 noremap <silent> <c-h> :wincmd h<CR>
 noremap <silent> <c-l> :wincmd l<CR>
 
-"escape highlight search
+"\\ Switch between files
+nnoremap <tab> :bp<CR> " Previous buffer file
+nnoremap <S-tab> :bn<CR> " Next buffer file
+nnoremap <Leader>q <c-^> " The last two files"
+
 "copy/pase
 vnoremap < <gv
 vnoremap > >gv
@@ -68,3 +72,5 @@ nmap <leader>s <Plug>CtrlSFPrompt
 vmap <leader>sw <Plug>CtrlSFVwordPath
 "terminal mapping
 tnoremap <Esc> <C-\><C-n>
+"hide buff
+noremap <leader>e

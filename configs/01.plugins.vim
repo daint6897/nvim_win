@@ -46,5 +46,7 @@ Plug 'mhinz/vim-startify'
 Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'ryanoasis/vim-devicons'
 Plug 'severin-lemaignan/vim-minimap'
-
+Plug 'juneedahamed/vc.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
 call plug#end()

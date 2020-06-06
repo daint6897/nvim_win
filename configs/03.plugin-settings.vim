@@ -62,7 +62,7 @@ let bclose_multiple = 0
 "SETUP python
 "let g:python_host_prog = '/Users/tiny/.pyenv/versions/neovim2/bin/python'
 "let g:python3_host_prog = '/Users/tiny/.pyenv/versions/neovim3/bin/python'
-let g:python3_host_prog='C:\Users\daiNt\AppData\Local\Programs\Python\Python38-32\python.exe'
+let g:python3_host_prog='C:\Users\daiNt\AppData\Local\Programs\Python\Python38-32'
 "MULTI COSUR
 let g:multi_cursor_select_all_word_key = '<c-a>'
 let g:multi_cursor_quit_key='<Esc>'

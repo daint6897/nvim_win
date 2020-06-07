@@ -15,6 +15,8 @@ set undolevels=1000
 set incsearch
 set hlsearch
 
+
+
 set number
 set relativenumber
 set ignorecase
@@ -37,6 +39,7 @@ inoremap ww <ESC>:w<cr>
 inoremap <silent> <c-l> <ESC>la
 inoremap <silent><expr><Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-Tab>"
+
 "nmap
 nnoremap ; :
 nnoremap <Esc><Esc> :nohlsearch<CR>
@@ -54,7 +57,9 @@ noremap <silent> <c-k> :wincmd k<CR>
 noremap <silent> <c-j> :wincmd j<CR>
 noremap <silent> <c-h> :wincmd h<CR>
 noremap <silent> <c-l> :wincmd l<CR>
-
+"open window explorer
+nmap <F11> :!start explorer /select,%:p<CR>
+imap <F11> <Esc><F11>
 "\\ Switch between files
 nnoremap <tab> :bp<CR> " Previous buffer file
 nnoremap <S-tab> :bn<CR> " Next buffer file

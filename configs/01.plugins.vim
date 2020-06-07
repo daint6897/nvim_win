@@ -61,4 +61,5 @@ Plug 'epilande/vim-react-snippets'
 "
 " Trigger configuration (Optional)
 "let g:UltiSnipsExpandTrigger="<C-l>
+Plug 'mitermayer/vim-prettier'
 call plug#end()

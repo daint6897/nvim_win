@@ -58,8 +58,8 @@ noremap <silent> <c-j> :wincmd j<CR>
 noremap <silent> <c-h> :wincmd h<CR>
 noremap <silent> <c-l> :wincmd l<CR>
 "open window explorer
-nmap <F11> :!start explorer /select,%:p<CR>
-imap <F11> <Esc><F11>
+nmap <F12> :!start explorer /select,%:p<CR>
+imap <F12> <Esc><F12>
 "\\ Switch between files
 nnoremap <tab> :bp<CR> " Previous buffer file
 nnoremap <S-tab> :bn<CR> " Next buffer file

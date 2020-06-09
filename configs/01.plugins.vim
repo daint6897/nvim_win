@@ -49,7 +49,7 @@ Plug 'severin-lemaignan/vim-minimap'
 Plug 'juneedahamed/vc.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vin-fugitive'
+"Plug 'tpope/vin-fugitive'
 " ES2015 code snippets (Optional)
 Plug 'epilande/vim-es2015-snippets'
 "
@@ -62,4 +62,13 @@ Plug 'epilande/vim-react-snippets'
 " Trigger configuration (Optional)
 "let g:UltiSnipsExpandTrigger="<C-l>
 Plug 'mitermayer/vim-prettier'
+Plug 'stanangeloff/php.vim'
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'roxma/nvim-completion-manager'  "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
+"check syntastic
+Plug 'scrooloose/syntastic'
+
 call plug#end()

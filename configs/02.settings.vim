@@ -41,6 +41,7 @@ inoremap <silent><expr><Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-Tab>"
 
 "nmap
+nnoremap <A-r> /render()<CR>
 nnoremap ; :
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <silent> dh :ALEGoToDefinitionInSplit<cr>
@@ -101,3 +102,9 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=go

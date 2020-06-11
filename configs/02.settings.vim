@@ -61,6 +61,9 @@ noremap <silent> <c-l> :wincmd l<CR>
 "open window explorer
 nmap <F12> :!start explorer /select,%:p<CR>
 imap <F12> <Esc><F12>
+
+nmap <F19> :!start explorer /select,%:p ..<CR>
+
 "\\ Switch between files
 nnoremap <tab> :bp<CR> " Previous buffer file
 nnoremap <S-tab> :bn<CR> " Next buffer file

@@ -55,6 +55,8 @@ Plug '~/.fzf'
 Plug 'epilande/vim-es2015-snippets'
 "
 " " React code snippets
+" with vim-plug
+Plug 'SirVer/ultisnips'
 Plug 'epilande/vim-react-snippets'
 "
 " " Ultisnips
@@ -76,4 +78,7 @@ Plug 'tpope/vim-commentary'
 Plug 'voldikss/vim-floaterm'
 Plug 'joonty/vdebug'
 Plug 'jremmen/vim-ripgrep'
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()

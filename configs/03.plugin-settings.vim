@@ -158,3 +158,9 @@ endif
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 "endif
+"thut le
+let g:indent_guides_enable_on_vim_startup = 1
+colorscheme tir_black
+set ts=4 sw-4 et
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1

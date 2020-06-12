@@ -86,6 +86,7 @@ noremap <leader>e
 
 " fzf
 noremap ` :Files<CR>
+noremap `r :FZF resources/<CR>
 noremap <c-p> :Buffers<CR>
 
 

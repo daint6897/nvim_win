@@ -23,11 +23,11 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdtree'
 Plug 'alvan/vim-closetag'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdcommenter'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'mattn/emmet-vim'
@@ -49,6 +49,7 @@ Plug 'severin-lemaignan/vim-minimap'
 Plug 'juneedahamed/vc.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
+Plug '~/.fzf'
 "Plug 'tpope/vin-fugitive'
 " ES2015 code snippets (Optional)
 Plug 'epilande/vim-es2015-snippets'
@@ -71,4 +72,8 @@ Plug 'noahfrederick/vim-laravel'
 "check syntastic
 Plug 'scrooloose/syntastic'
 
+Plug 'tpope/vim-commentary'
+Plug 'voldikss/vim-floaterm'
+Plug 'joonty/vdebug'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()

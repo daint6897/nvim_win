@@ -6,7 +6,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = { 'javascript': { 'left': '{/**','right': '*/}' } }
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', 'node_modules']
 let g:NERDTreeShowBookmarks=1
@@ -81,7 +81,6 @@ let g:ale_sign_warning = '--'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint'],
-\   'python': ['pylint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace','prettier'],
@@ -90,17 +89,18 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 " ======= Snippet =========
-let g:UltiSnipsExpandTrigger="<c-c>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+" let g:UltiSnipsExpandTrigger="<c-Z>"
+" let g:UltiSnipsJumpForwardTrigger="<c-k>"
+" let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+" let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+" let g:UltiSnipsEditSplit="vertical"
 " Use <C-l> for trigger snippet expand.
 "=============end snippet==============
 " Easymotion
 let g:EasyMotion_smartcase = 1
 
 "====== COC-NVIM ======
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json','coc-emmet','coc-prettier']
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -156,11 +156,47 @@ endif
 "if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!node_modules/*"'
   set grepprg=rg\ --vimgrep
-  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 "endif
 "thut le
 let g:indent_guides_enable_on_vim_startup = 1
-colorscheme tir_black
-set ts=4 sw-4 et
+"colorscheme tir_black
+"set ts=4 sw-4 et
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 1
+
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+let NERDTreeQuitOnOpen=1
+let g:NERDTreeWinSize=100
+
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+    call youcompleteme#DisableCursorMovedAutocommands()
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+    call youcompleteme#EnableCursorMovedAutocommands()
+endfunction
+"let g:fastfold_savehook = 1
+"let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+"let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+"let g:markdown_folding = 1
+"let g:tex_fold_enabled = 1
+"let g:vimsyn_folding = 'af'
+"let g:xml_syntax_folding = 1
+"let g:javaScript_fold = 1
+"let g:sh_fold_enabled= 7
+"let g:ruby_fold = 1
+"let g:perl_fold = 1
+"let g:perl_fold_blocks = 1
+"let g:r_syntax_folding = 1
+"let g:rust_fold = 1
+"let g:php_folding = 1
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

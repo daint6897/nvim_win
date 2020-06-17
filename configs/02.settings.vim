@@ -41,6 +41,7 @@ inoremap <silent><expr><Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-Tab>"
 
 "nmap
+noremap <TAB> <ESC>
 nnoremap <A-r> /render()<CR>
 nnoremap ; :
 nnoremap <Esc><Esc> :nohlsearch<CR>
@@ -54,10 +55,11 @@ noremap Y y$
 nmap <silent> ff <Plug>(easymotion-overwin-f2)
 nmap <silent> fl <Plug>(easymotion-overwin-line)
 nmap <leader>rn <Plug>(coc-rename)
-noremap <silent> <c-k> :wincmd k<CR>
-noremap <silent> <c-j> :wincmd j<CR>
-noremap <silent> <c-h> :wincmd h<CR>
-noremap <silent> <c-l> :wincmd l<CR>
+noremap  <A-k> :wincmd k<CR>
+noremap  <A-j> :wincmd j<CR>
+noremap  <A-h> :wincmd h<CR>
+noremap  <A-l> :wincmd l<CR>
+noremap <A-q> :q<CR>
 "open window explorer
 nmap <F12> :!start explorer /select,%:p<CR>
 imap <F12> <Esc><F12>
@@ -74,7 +76,7 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap <silent> y y:call ClipboardYank()<cr>
 vnoremap <silent> d d:call ClipboardYank()<cr>
-nnoremap <silent> p :call ClipboardPaste()<cr>p
+nnoremap <silent> gp :call ClipboardPaste()<cr>p
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "ctrslf
 nmap <leader>s <Plug>CtrlSFPrompt
@@ -103,12 +105,12 @@ let g:fzf_colors =
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Conditional'],
   \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
+  \ 'marker':  ['fg', 'IncSearch'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=go
+nnoremap <A-J> :m .+1<CR>==
+nnoremap <A-K> :m .-2<CR>==
+inoremap <A-J> <Esc>:m .+1<CR>==gi
+inoremap <A-K> <Esc>:m .-2<CR>==gi
+vnoremap <A-J> :m '>+1<CR>gv=gv
+vnoremap <A-K> :m '<-2<CR>gv=go

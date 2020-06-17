@@ -37,33 +37,37 @@ Plug 'w0rp/ale'
 Plug 'galooshi/vim-import-js'
 Plug 'Shougo/denite.nvim'
 "snippets
-Plug 'honza/vim-snippets'
+
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+"Plug 'epilande/vim-react-snippets'
+"Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+"Plug 'honza/vim-snippets'
 "fzf
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'dyng/ctrlsf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'ryanoasis/vim-devicons'
-Plug 'severin-lemaignan/vim-minimap'
+"Plug 'severin-lemaignan/vim-minimap'
 Plug 'juneedahamed/vc.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 Plug '~/.fzf'
 "Plug 'tpope/vin-fugitive'
 " ES2015 code snippets (Optional)
-Plug 'epilande/vim-es2015-snippets'
+"Plug 'epilande/vim-es2015-snippets'
 "
 " " React code snippets
 " with vim-plug
-Plug 'SirVer/ultisnips'
-Plug 'epilande/vim-react-snippets'
 "
-" " Ultisnips
- Plug 'SirVer/ultisnips'
 "
 " Trigger configuration (Optional)
-"let g:UltiSnipsExpandTrigger="<C-l>
+"let g:UltiSnipsExpandTrigger=<c-e>
 Plug 'mitermayer/vim-prettier'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-dispatch'             "| Optional
@@ -76,9 +80,12 @@ Plug 'scrooloose/syntastic'
 
 Plug 'tpope/vim-commentary'
 Plug 'voldikss/vim-floaterm'
-Plug 'joonty/vdebug'
+"Plug 'joonty/vdebug'
 Plug 'jremmen/vim-ripgrep'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
+Plug 'terryma/vim-multiple-cursors'
+"Plug 'konfekt/fastfold'
 call plug#end()
